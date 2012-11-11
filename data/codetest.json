@@ -1,0 +1,24 @@
+{
+	"seasons":[
+		{
+			"name":"Spring",
+			"id":"weklv7",
+			"months": 8
+		},
+		{
+			"name":"Summer",
+			"id":"lvuec5",
+			"months": 4
+		},
+		{
+			"name":"Autumn",
+			"id":"jsfpy3",
+			"months": 0
+		},
+		{
+			"name":"Winter",
+			"id":"cvnvn6",
+			"months": 4
+		}
+	]
+}     

@@ -1,0 +1,9 @@
+@import url("Oracle-ATG.min.css");
+@import url("jquery.mobile.structure-1.2.0.min.css");
+body{}body .ui-shadow{-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
+body .ui-li .ui-btn-inner a.ui-link-inherit,body .ui-li-static.ui-li{padding:5px 9px 4px;}body .ui-li .ui-btn-inner a.ui-link-inherit.ui-corner-bottom,body .ui-li-static.ui-li.ui-corner-bottom{padding-top:4px;}
+body .ui-header p{color:#999999;text-align:center;font-weight:normal;font-size:12px;margin-top:-5px;}
+body .ui-li-heading{margin:0 0 8px;font-size:15px;}
+body .ui-li-desc{margin-bottom:0;color:#999999;}
+body .ui-li-has-count .ui-li-count{display:inline-block;margin-top:-17px;padding:0;width:26px;height:26px;right:21px;line-height:26px;vertical-align:middle;text-align:center;border:2px solid #fff;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;background-color:#76888b;background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#8d9c9d), to(#64787f));background-image:-webkit-linear-gradient(top, #8d9c9d, #64787f);background-image:-moz-linear-gradient(top, #8d9c9d, #64787f);background-image:-ms-linear-gradient(top, #8d9c9d, #64787f);background-image:-o-linear-gradient(top, #8d9c9d, #64787f);-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.5);box-shadow:0 1px 1px rgba(0, 0, 0, 0.5);color:#fff;text-shadow:0 1px 1px rgba(0, 0, 0, 0.35);}
+#seasons-list{max-width:400px;margin:20px auto;}

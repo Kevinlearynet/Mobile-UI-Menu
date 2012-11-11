@@ -1,0 +1,93 @@
+/* =Imports & libraries
+-------------------------------------------------------------- */
+
+@import url("Oracle-ATG.min.css");
+@import url("jquery.mobile.structure-1.2.0.min.css");
+
+
+/* =LESS Assets
+-------------------------------------------------------------- */
+
+/* Mixins */
+.box-shadow( @arguments ) {
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+.rounded( @radius: 7px ) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+.gradient( @color: #F5F5F5, @start: #EEE, @stop: #FFF ) {
+	background-color: @color; 
+	background-image: -webkit-gradient( linear, 0% 0%, 0% 100%, from(@start), to(@stop) );
+	background-image: -webkit-linear-gradient( top, @start, @stop ); 
+	background-image:    -moz-linear-gradient( top, @start, @stop );
+	background-image:     -ms-linear-gradient( top, @start, @stop );
+	background-image:      -o-linear-gradient( top, @start, @stop );
+}
+
+/* Branding */
+@understate: #999;
+
+/* =jQuery Mobile Overrides
+-------------------------------------------------------------- */
+body {
+
+	/* Global UI */
+	.ui-shadow {
+		.box-shadow( none );
+	}
+	.ui-li .ui-btn-inner a.ui-link-inherit, 
+	.ui-li-static.ui-li {
+		padding:5px 9px 4px;
+		&.ui-corner-bottom {
+			padding-top:4px;
+		}
+	}
+	
+	/* Header */
+	.ui-header p {
+		color:@understate;
+		text-align:center;
+		font-weight:normal;
+		font-size:12px;
+		margin-top:-5px;
+	}
+	
+	/* Read-only list views */
+	.ui-li-heading {
+		margin:0 0 8px;
+		font-size:15px;
+	}
+	.ui-li-desc {
+		margin-bottom:0;
+		color:@understate;
+	}
+	.ui-li-has-count .ui-li-count {
+		display:inline-block;
+		margin-top:-17px; /* Offset for vertical centering */
+		padding:0;
+		width:26px;
+		height:26px;
+		right:21px;
+		line-height:26px;
+		vertical-align:middle;
+		text-align:center;
+		border:2px solid #fff;
+		.rounded( 15px );
+		.gradient( #76888b, #8d9c9d, #64787f );
+		.box-shadow( 0 1px 1px rgba(0,0,0,0.5) );
+		color:#fff;
+		text-shadow:0 1px 1px rgba( 0, 0, 0, 0.35 ); /* A little something extra */
+	}
+}
+
+
+/* =General
+-------------------------------------------------------------- */
+#seasons-list {
+	max-width:400px;
+	margin:20px auto;
+}

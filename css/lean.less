@@ -1,0 +1,128 @@
+/* =Imports & libraries
+-------------------------------------------------------------- */
+@import url('normalize.css');
+
+
+/* =LESS Assets
+-------------------------------------------------------------- */
+
+/* Mixins */
+.box-shadow( @arguments ) {
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+.rounded( @radius: 7px ) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+.gradient( @color: #F5F5F5, @start: #EEE, @stop: #FFF ) {
+	background-color: @color; 
+	background-image: -webkit-gradient( linear, 0% 0%, 0% 100%, from(@start), to(@stop) );
+	background-image: -webkit-linear-gradient( top, @start, @stop ); 
+	background-image:    -moz-linear-gradient( top, @start, @stop );
+	background-image:     -ms-linear-gradient( top, @start, @stop );
+	background-image:      -o-linear-gradient( top, @start, @stop );
+}
+
+/* Branding */
+@understate: #999;
+@border-color: #d8d8d8;
+
+
+/* =Structure
+-------------------------------------------------------------- */
+.wrapper {
+	max-width:400px;
+	margin:0 auto;
+	padding:20px;
+}
+header {
+	margin:5px 0 20px;
+	h1 {
+		margin:0;
+	}
+	p {
+		margin:10px 0 0;
+	}
+}
+.listview {
+	list-style:none;
+	padding:0;
+	.rounded(7px);
+	li {
+		position:relative;
+		padding:3px 9px 5px;
+		&:first-child {
+			.rounded( 7px 7px 0 0 );
+		}
+		&:last-child {
+			.rounded( 0 0 7px 7px );
+		}
+	}
+	h3 {
+		margin:0 0 1px;
+	}
+	.desc {
+		margin:0;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	.count {
+		position:absolute;
+		right:21px;
+		top:50%;
+		margin-top:-17px; /* Offset for vertical centering */
+	}
+}
+.count {
+	display:inline-block;
+	padding:0;
+	width:26px;
+	height:26px;
+	line-height:26px;
+	vertical-align:middle;
+	text-align:center;
+	border:2px solid #fff;
+	.rounded( 15px );
+	.gradient( #76888b, #8d9c9d, #64787f );
+	.box-shadow( 0 1px 1px rgba(0,0,0,0.5) );
+	color:#fff;
+	text-shadow:0 1px 1px rgba( 0, 0, 0, 0.35 ); /* A little something extra */
+}
+
+
+/* =Skin
+-------------------------------------------------------------- */
+body {
+	font:12px/1.6em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background:#F9F9F9;
+}
+header {
+	text-align:center;
+	p {
+		font-size:14px;
+		color:@understate;
+	}
+}
+.listview {
+	border: 0 solid @border-color;
+	border-width: 0 0 1px 1px;
+	background:#fff;
+	li {
+		background:#fff;
+		border: 0 solid @border-color;
+		border-width: 1px 1px 0 0;
+	}
+	h3 {
+		font-size:15px;
+	}
+}
+.desc {
+	color:@understate;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: normal;
+}

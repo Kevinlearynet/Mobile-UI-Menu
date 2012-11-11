@@ -1,0 +1,11 @@
+<ul class="listview">
+{#seasons}
+	<li>
+		<h3>{name}</h3>
+		<p class="desc">{id}</p>
+		{@if cond="{months} > 0"}
+		<span class="count">{months}</span>
+		{/if}
+	</li>
+{/seasons}
+</ul><!--// end .listview -->
