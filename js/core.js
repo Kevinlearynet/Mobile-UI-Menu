@@ -120,20 +120,22 @@
 						var instance = $(this);
 						
 						// Get model data
-						$.getJSON( $.atg.constants.MODEL_DIR + model, function(data) {
-						
-							// Debugging
-							if ( $.atg.constants.DEBUG )
-								$.atg.utils().log(data);
-							
-							// Templating view from model
-							$.atg.utils().getTemplateAjax( template_name, $.atg.utils().constants.TEMPLATE_DIR + file, data, function( error, output ){
-								if ( error && $.atg.utils().constants.DEBUG )
-									$.atg.utils().log(error);
+						$.ajax({
+							cache : $.atg.constants.DEBUG,
+							success: function(data) {
+								// Debugging
+								if ( $.atg.constants.DEBUG )
+									$.atg.utils().log(data);
 								
-								instance.html(output);
-							});
-							
+								// Templating view from model
+								$.atg.utils().getTemplateAjax( template_name, $.atg.utils().constants.TEMPLATE_DIR + file, data, function( error, output ){
+									if ( error && $.atg.utils().constants.DEBUG )
+										$.atg.utils().log(error);
+									
+									instance.html(output);
+								});
+							},
+							url: $.atg.constants.MODEL_DIR + model
 						});
 						
 					}); // end each()
