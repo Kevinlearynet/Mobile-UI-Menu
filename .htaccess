@@ -44,7 +44,7 @@ ExpiresByType application/javascript    "access plus 1 year"
 
 # Specify a Vary: Accept-Encoding header
 <IfModule mod_headers.c>
-    <FilesMatch "\.(js|css|xml|gz)$">
+    <FilesMatch "\.(js|css|xml|gz|json)$">
         Header append Vary Accept-Encoding
     </FilesMatch>
 </IfModule>
